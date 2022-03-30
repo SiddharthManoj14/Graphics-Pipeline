@@ -137,4 +137,57 @@ the 3D position. Like the vertex and tessellation control shader, this shader
 can change the 3D position of a vertex. This is the _last opportunity_ to do
 that, since the fragment shader cannot.
 
-###
+### Some of the Resources I found helpful
+
+## GLSL Editors
+
+*Online GLSL Editors*
+
+* [GLSL Sandbox](http://glslsandbox.com) - Online live editor for fragment shaders.
+* [GLSLbin](http://glslb.in) - Fragment shader sandbox supporting [glslify](https://github.com/stackgl/glslify).
+* [SHDR Editor](http://shdr.bkcore.com) - Live GLSL shader editor, viewer and validator.
+* [Shader Toy](https://www.shadertoy.com) - Most popular live editor for fragment shaders.
+* [ShaderFrog](http://shaderfrog.com/) - WebGL Shader Editor and Composer
+
+## Libraries
+
+*Useful libraries for OpenGL applications*
+
+* [assimp](https://github.com/assimp/assimp) - Portable library to import 3D models in a uniform manner.
+* [Bullet](http://bulletphysics.org/wordpress) - It provides state of the art collision detection, soft body and rigid body dynamics.
+* [fltk](https://www.fltk.org/) - C++ Toolkit to generate UI widgets portably. [LGPLv2](https://www.fltk.org/COPYING.php)
+* [freeGLUT](http://freeglut.sourceforge.net) - Mature library that allows to create/manage windows containing OpenGL contexts.
+* [GLFW](http://www.glfw.org) - Modern library for creating/interact windows with OpenGL contexts.
+* [GLFM](https://github.com/brackeen/glfm) - Supplies an OpenGL ES context and input events for mobile devices and the web.
+* [glm](http://glm.g-truc.net/0.9.6/index.html) - Mathematics library for graphics software based on the GLSL specifications.
+* [Magnum](https://github.com/mosra/magnum) - It is a 2D/3D graphics engine for modern OpenGL.
+* [MathFu](http://google.github.io/mathfu/) - C++ math library developed primarily for games focused on simplicity and efficiency.
+* [Newton](http://newtondynamics.com/forum/newton.php) - It is a cross-platform life-like physics.
+* [OGLplus](http://oglplus.org) - Collection of libraries which implement an object-oriented facade over OpenGL.
+* [SDL](http://www.libsdl.org) - Designed to provide low level access to multimedia and graphics hardware.
+* [SFML](http://www.sfml-dev.org) - Simple interface to ease the development of games and multimedia applications.
+* [SOIL](http://www.lonesock.net/soil.html) - Tiny C library used primarily for uploading textures into OpenGL. (see [SOIL2](https://bitbucket.org/SpartanJ/soil2))
+* [Pangolin](https://github.com/stevenlovegrove/Pangolin) - Lightweight portable rapid development library for managing OpenGL display / interaction and abstracting video input.
+
+
+## Profile Loaders
+
+*Profile loaders for OpenGL*
+
+* [gl3w](https://github.com/skaslev/gl3w) - Simple OpenGL core profile loader.
+* [glad](https://github.com/Dav1dde/glad) - Multi profile loader-generator based on the official specs.
+* [glbindify](https://github.com/nnesse/glbindify) - Command line tool to generate C bindings for OpenGL, wgl, and glX.
+* [glbinding](https://github.com/cginternals/glbinding) - Profile loader leveraging C++11 features to provide type safety.
+* [GLEW](http://glew.sourceforge.net) - Mature cross-platform library to load OpenGL extensions.
+
+
+## References
+
+*OpenGL references*
+
+* [docs.GL](http://docs.gl) - It is an alternative documentation for OpenGL.
+* [OpenGL API Tables](http://web.eecs.umich.edu/~sugih/courses/eecs487/common/notes/APITables.xml) - Quick reference of API's for several OpenGL and GLSL versions.
+* [OpenGL Cheat Sheet](https://www.khronos.org/files/opengl43-quick-reference-card.pdf) - Quick reference card of OpenGL 4.3 commands and syntax.
+* [OpenGL Docs](https://www.opengl.org/sdk/docs) - Official documentation website.
+* [OpenGL Wiki](https://www.opengl.org/wiki/Main_Page) - Official OpenGL wiki.
+
