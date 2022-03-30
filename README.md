@@ -191,3 +191,7 @@ that, since the fragment shader cannot.
 * [OpenGL Docs](https://www.opengl.org/sdk/docs) - Official documentation website.
 * [OpenGL Wiki](https://www.opengl.org/wiki/Main_Page) - Official OpenGL wiki.
 
+#### Future Plans
+
+* Figuring out Raserization and Ray Tracing.
+
