@@ -102,3 +102,37 @@ Large amounts of data that may be randomly accessed by shaders is stored in
 "texture" memory (e.g., color texture images). This data must be accessed by
 sampling specific pixel values based on a given 2D locations (e.g., the U.V.
 mapping of a fragment).
+
+### Tessellation Control Shader
+
+The tessellation control shader determines how to subdivide each input "patch"
+(i.e., triangle). Unlike the subdivision we saw with [subdivision
+surfaces](https://en.wikipedia.org/wiki/Subdivision_surface), the subdivision is
+determined independently for each triangle and _not_ called recursively.
+The exact pattern of the resulting triangulation is left largely to
+implementation. As the shader programmer, you have control over:
+
+  - the number of new edges each input each should split into
+    (`gl_TessLevelOuter[1] = 5` means the edge across from vertex `1` (i.e., the
+    edge between vertices `0` and `2`) should be split into 5 edges); and
+  - the number of edges to place toward the center of the patch
+    (`gl_TessLevelInner[0] = 5` would be a good choice if
+    `gl_TessLevelOuter[...] = 5` and a regular tessellation was desired).
+
+Unlike the vertex or fragment shader, the tessellation control shader has access
+to attribute information at _all_ of the vertices of a triangle. The main
+responsibility of this shader is setting the `gl_TessLevelOuter` and
+`gl_TessLevelInner` variables.
+
+### Tessellation Evaluation Shader
+
+The tessellation _evaluation_ shader takes the result of the tessellation that
+the tessellation _control_ shader has specified. This shader is called once for
+every vertex output during tessellation (including original corners). It has
+access to the attribute information of the original corners (e.g., in our code
+`in vec3 pos_es_in[]`) and a special variable `gl_TessCoord` containing the co-ordinate of the
+current vertex. Using this information, it is possible to interpolate
+information stored at the original corners onto the current vertex: for example,
+the 3D position. Like the vertex and tessellation control shader, this shader
+can change the 3D position of a vertex. This is the _last opportunity_ to do
+that, since the fragment shader cannot.
